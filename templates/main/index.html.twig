@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+<style>
+    table, td {
+       // border: 1px solid #333;
+    }
+
+    thead {
+        background-color: #fb5607;
+        color: #fff;
+    }
+</style>
+
+<div class="container">
+    <h1>Bonjour Marie! ✅</h1>
+    <span>Voici la des utilisateurs</span>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Classe</th>
+            <th scope="col">Age</th>
+            </tr>
+        </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <th scope="row">{{ user.id }}</th>
+                <td>{{user.prenom}}</td>
+                <td>{{user.nom}}</td>
+                <td>{{user.classe}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+</div>
+
+
+{% endblock %}

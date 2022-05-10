@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+<style>
+    table, td {
+       // border: 1px solid #333;
+    }
+
+    thead {
+        background-color: #fb5607;
+        color: #fff;
+    }
+</style>
+
+<div class="container">
+    <h1>Bonjour Marie! ✅</h1>
+    
+    
+    <div class="card text-center">
+        <div class="card-header">
+            Information de l'utilisateur N° {{user.id}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Prénom et nom: <span>{{user.prenom}} {{user.nom}}</span></h5>
+            <h5 class="card-title">Age: <span>{{user.age}}</span></h5>
+            <h5 class="card-title">Classe: <span>{{user.classe}}</span></h5>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
